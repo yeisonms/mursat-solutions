@@ -1,4 +1,5 @@
-import { ArrowRight, Calendar, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { BookingModal } from "@/components/site/BookingModal";
 
 export function Hero() {
   return (
@@ -22,14 +23,8 @@ export function Hero() {
           ágiles para startups que necesitan moverse rápido sin sacrificar calidad.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-          <a href="#contacto" className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold glow-neon hover:scale-[1.02] transition">
-            Inicia tu MVP hoy
-            <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
-          </a>
-          <a href="#contacto" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full neumo border border-border/60 font-semibold hover:border-neon/60 transition">
-            <Calendar className="size-4" />
-            Agenda una sesión de arquitectura
-          </a>
+          <BookingModal triggerText="Inicia tu MVP hoy" triggerVariant="primary" />
+          <BookingModal triggerText="Agenda una sesión de arquitectura" triggerVariant="outline" />
         </div>
         <div className="mt-20 grid grid-cols-3 max-w-2xl mx-auto gap-px rounded-2xl overflow-hidden neumo p-px">
           {[
