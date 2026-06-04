@@ -17,9 +17,11 @@ export function Nav() {
           <a href="#casos" className="hover:text-foreground transition">Casos</a>
           <a href="#contacto" className="hover:text-foreground transition">Contacto</a>
         </div>
-        <a href="#contacto" className="text-sm px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition">
-          Iniciar proyecto
-        </a>
+        <BookingModal>
+          <button className="text-sm px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition cursor-pointer">
+            Iniciar proyecto
+          </button>
+        </BookingModal>
       </nav>
     </header>
   );
