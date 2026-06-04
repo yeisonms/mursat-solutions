@@ -14,13 +14,12 @@ export function CTA() {
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
             Reservamos un cupo limitado de proyectos por trimestre para garantizar atención boutique.
           </p>
-          <a
-            href="mailto:hola@mursat.dev"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold glow-neon hover:scale-[1.02] transition"
-          >
-            Hablemos de tu producto
-            <ArrowRight className="size-4" />
-          </a>
+          <BookingModal>
+            <button className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold glow-neon hover:scale-[1.02] transition cursor-pointer">
+              Hablemos de tu producto
+              <ArrowRight className="size-4" />
+            </button>
+          </BookingModal>
         </div>
       </div>
     </section>
