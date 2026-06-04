@@ -1,4 +1,5 @@
 import { Zap } from "lucide-react";
+import { BookingModal } from "@/components/site/BookingModal";
 
 export function Nav() {
   return (
