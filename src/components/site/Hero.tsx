@@ -1,4 +1,5 @@
-import { ArrowRight, Calendar, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { BookingModal } from "@/components/site/BookingModal";
 
 export function Hero() {
   return (
