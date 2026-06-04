@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { BookingModal } from "@/components/site/BookingModal";
 
 export function CTA() {
   return (
