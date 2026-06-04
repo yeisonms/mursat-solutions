@@ -7,36 +7,38 @@ interface BookingModalProps {
   triggerText?: string;
   triggerVariant?: "primary" | "outline";
   className?: string;
+  children?: React.ReactNode;
 }
 
 export function BookingModal({
   triggerText = "Agenda una sesión de arquitectura",
   triggerVariant = "primary",
   className,
+  children,
 }: BookingModalProps) {
   return (
     <DialogPrimitive.Root>
       <DialogPrimitive.Trigger asChild>
-        <button
-          className={cn(
-            "cursor-pointer",
-            triggerVariant === "primary"
-              ? "group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold glow-neon hover:scale-[1.02] transition"
-              : "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full neumo border border-border/60 font-semibold hover:border-neon/60 transition",
-            className
-          )}
-        >
-          {triggerVariant === "primary" && (
-            <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
-          )}
-          {triggerVariant === "outline" && <Calendar className="size-4" />}
-          {triggerText}
-        </button>
+        {children ?? (
+          <button
+            className={cn(
+              "cursor-pointer",
+              triggerVariant === "primary"
+                ? "group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold glow-neon hover:scale-[1.02] transition"
+                : "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full neumo border border-border/60 font-semibold hover:border-neon/60 transition",
+              className
+            )}
+          >
+            {triggerVariant === "primary" && (
+              <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
+            )}
+            {triggerVariant === "outline" && <Calendar className="size-4" />}
+            {triggerText}
+          </button>
+        )}
       </DialogPrimitive.Trigger>
       <DialogPrimitive.Portal>
-        <DialogPrimitive.Overlay
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0"
-        />
+        <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0" />
         <DialogPrimitive.Content
           className={cn(
             "fixed left-[50%] top-[50%] z-50 w-[calc(100%-2rem)] max-w-[900px] translate-x-[-50%] translate-y-[-50%]",
