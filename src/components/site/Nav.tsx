@@ -13,6 +13,7 @@ export function Nav() {
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#servicios" className="hover:text-foreground transition">Servicios</a>
+          <a href="#portafolio" className="hover:text-foreground transition">Portafolio</a>
           <a href="#proceso" className="hover:text-foreground transition">Proceso</a>
           <a href="#casos" className="hover:text-foreground transition">Casos</a>
           <a href="#contacto" className="hover:text-foreground transition">Contacto</a>
