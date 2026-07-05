@@ -32,6 +32,7 @@ function Index() {
       <Nav />
       <Hero />
       <Services />
+      <Portfolio />
       <Process />
       <CaseStudy />
       <CTA />
