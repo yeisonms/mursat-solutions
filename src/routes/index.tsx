@@ -1,10 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
+import { TechMarquee } from "@/components/site/TechMarquee";
 import { Services } from "@/components/site/Services";
 import { Portfolio } from "@/components/site/Portfolio";
 import { Process } from "@/components/site/Process";
+import { Leadership } from "@/components/site/Leadership";
 import { CaseStudy } from "@/components/site/CaseStudy";
+import { FAQ } from "@/components/site/FAQ";
 import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
 
