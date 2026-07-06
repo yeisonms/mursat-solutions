@@ -34,10 +34,13 @@ function Index() {
       />
       <Nav />
       <Hero />
+      <TechMarquee />
       <Services />
       <Portfolio />
       <Process />
+      <Leadership />
       <CaseStudy />
+      <FAQ />
       <CTA />
       <Footer />
     </main>
