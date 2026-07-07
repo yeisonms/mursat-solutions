@@ -28,6 +28,9 @@ export function BookingModal({
       cal("ui", {
         theme: "dark",
         cssVarsPerTheme: {
+          light: {
+            "cal-brand": "#00ff88",
+          },
           dark: {
             "cal-brand": "#00ff88",
             "cal-bg": "#0a0a0a",
