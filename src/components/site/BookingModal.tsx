@@ -20,8 +20,29 @@ export function BookingModal({
   className,
   children,
 }: BookingModalProps) {
+  const [open, setOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    (async () => {
+      const cal = await getCalApi();
+      cal("ui", {
+        theme: "dark",
+        cssVarsPerTheme: {
+          dark: {
+            "cal-brand": "#00ff88",
+            "cal-bg": "#0a0a0a",
+            "cal-bg-emphasis": "#111",
+          },
+        },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
   return (
-    <DialogPrimitive.Root>
+    <DialogPrimitive.Root open={open} onOpenChange={setOpen}>
+
       <DialogPrimitive.Trigger asChild>
         {children ?? (
           <button
