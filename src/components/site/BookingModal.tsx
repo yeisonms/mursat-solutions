@@ -4,7 +4,7 @@ import { X, Calendar, ArrowRight } from "lucide-react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { cn } from "@/lib/utils";
 
-const CAL_USERNAME = "mursat-solutions-udwzxq";
+const CAL_USERNAME = "mursat-solutions-udwzxq/30min";
 
 
 interface BookingModalProps {
