@@ -96,21 +96,18 @@ export function BookingModal({
             </DialogPrimitive.Close>
           </div>
 
-          {/* Calendar Placeholder */}
-          <div className="flex-1 p-4 md:p-8 overflow-y-auto">
-            <div className="w-full min-h-[500px] rounded-2xl neumo-inset flex flex-col items-center justify-center gap-4 border border-neon/10">
-              <Calendar className="size-12 text-neon/40" />
-              <p className="text-muted-foreground text-sm text-center px-4">
-                Calendario embebido (Cal.com / Calendly)
-              </p>
-              <p className="text-xs text-muted-foreground/60 text-center px-8 max-w-md">
-                El iframe se cargará aquí con las dimensiones responsivas
-              </p>
-              <div className="mt-2 px-4 py-2 rounded-full bg-surface border border-neon/20 text-xs text-neon font-medium">
-                Próximamente disponible
-              </div>
-            </div>
+          {/* Cal.com embedded scheduler */}
+          <div className="flex-1 overflow-y-auto">
+            {open && (
+              <Cal
+                namespace="mursat-booking"
+                calLink={CAL_USERNAME}
+                style={{ width: "100%", height: "100%", minHeight: "600px", overflow: "scroll" }}
+                config={{ layout: "month_view", theme: "dark" }}
+              />
+            )}
           </div>
+
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
     </DialogPrimitive.Root>
