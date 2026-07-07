@@ -80,14 +80,18 @@ export function BookingModal({
           {/* Header */}
           <div className="flex items-start justify-between px-6 md:px-8 py-5 md:py-6 border-b border-border/40 shrink-0">
             <div className="pr-4">
-              <h3 className="text-xl md:text-2xl font-display font-bold tracking-tight">
-                Hablemos de tu{" "}
-                <span className="text-gradient-neon">arquitectura técnica</span>
-              </h3>
-              <p className="text-sm text-muted-foreground mt-1 max-w-xl leading-relaxed">
-                Selecciona un espacio en nuestro calendario y cuéntanos brevemente
-                sobre tu reto técnico para prepararnos.
-              </p>
+              <DialogPrimitive.Title asChild>
+                <h3 className="text-xl md:text-2xl font-display font-bold tracking-tight">
+                  Hablemos de tu{" "}
+                  <span className="text-gradient-neon">arquitectura técnica</span>
+                </h3>
+              </DialogPrimitive.Title>
+              <DialogPrimitive.Description asChild>
+                <p className="text-sm text-muted-foreground mt-1 max-w-xl leading-relaxed">
+                  Selecciona un espacio en nuestro calendario y cuéntanos brevemente
+                  sobre tu reto técnico para prepararnos.
+                </p>
+              </DialogPrimitive.Description>
             </div>
             <DialogPrimitive.Close asChild>
               <button className="shrink-0 inline-flex items-center justify-center size-10 rounded-full neumo hover:border-neon/40 transition border border-transparent cursor-pointer">
@@ -97,16 +101,17 @@ export function BookingModal({
           </div>
 
           {/* Cal.com embedded scheduler */}
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 min-h-0 h-[70vh] overflow-hidden">
             {open && (
               <Cal
                 namespace="mursat-booking"
                 calLink={CAL_USERNAME}
-                style={{ width: "100%", height: "100%", minHeight: "600px", overflow: "scroll" }}
+                style={{ width: "100%", height: "100%", overflow: "scroll" }}
                 config={{ layout: "month_view", theme: "dark" }}
               />
             )}
           </div>
+
 
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
