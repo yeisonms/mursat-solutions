@@ -1,7 +1,11 @@
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { X, Calendar, ArrowRight } from "lucide-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 import { cn } from "@/lib/utils";
+
+const CAL_USERNAME = "mursat-solutions-udwzxq";
+
 
 interface BookingModalProps {
   triggerText?: string;
