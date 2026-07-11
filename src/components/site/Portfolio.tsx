@@ -8,49 +8,44 @@ import marketplaceImg from "@/assets/portfolio/marketplace.jpg";
 
 const projects = [
   {
-    title: "Plataforma E-commerce",
-    description: "Arquitectura headless con catálogo en tiempo real y checkout optimizado que incrementó conversiones en un 34%.",
-    image: ecommerceImg,
-    tags: ["React", "Supabase", "Stripe", "Tailwind"],
+    title: "RedFit: Plataforma de Gestión y Operación Multi-Sede",
+    description: "Arquitectura transaccional para la administración unificada de redes de establecimientos fitness. Desarrollamos los módulos centrales para el seguimiento financiero, el control de membresías y la orquestación de operaciones entre múltiples sedes en tiempo real.",
+    image: membershipImg,
+    tags: ["Arquitectura Multi-Tenant", "Módulos Financieros", "Optimización SQL", "Gestión de Membresías"],
+    link: "#link-falso-redfit",
     span: "md:col-span-2",
     aspect: "aspect-[16/9]",
     accent: "text-neon",
   },
   {
-    title: "Portal de Viajes Seguro",
-    description: "Motor de reservas con encriptación end-to-end y pasarela Wompi para pagos locales.",
+    title: "Annac: Ecosistema Digital para Turismo a la Medida",
+    description: "Arquitectura web orientada a la comercialización de servicios turísticos personalizados. La solución destaca por su integración operativa con plataformas de terceros y el despliegue continuo mediante infraestructura escalable (Vercel), priorizando la protección de los usuarios con protocolos de seguridad (SSL).",
     image: travelImg,
-    tags: ["Next.js", "TypeScript", "Cloud", "Wompi"],
+    tags: ["Integración de Terceros", "Despliegue Serverless", "SSL", "Arquitectura Web"],
+    link: "#link-falso-annac",
     span: "md:col-span-1",
     aspect: "aspect-[4/3]",
     accent: "text-neon-violet",
   },
   {
-    title: "Sistema de Membresías Multi-sede",
-    description: "Core transaccional de alta concurrencia con sincronización de sedes en tiempo real.",
-    image: membershipImg,
-    tags: ["React", "Supabase", "Cloud"],
+    title: "Memories: Plataforma E-Commerce Transaccional de Alta Gama",
+    description: "Arquitectura de comercio electrónico especializada en el sector de joyería premium. El desarrollo se fundamentó en la dirección estricta de requerimientos técnicos y la construcción de módulos avanzados de seguimiento financiero, garantizando transacciones seguras y trazabilidad impecable.",
+    image: ecommerceImg,
+    tags: ["Arquitectura E-Commerce", "Trazabilidad Financiera", "Gestión de Requerimientos", "Transacciones Seguras"],
+    link: "#link-falso-memories",
     span: "md:col-span-1",
     aspect: "aspect-[4/3]",
     accent: "text-neon-cyan",
   },
   {
-    title: "App de Gestión Logística",
-    description: "Control de inventarios, rutas y escaneo de códigos en campo para reducir pérdidas operativas.",
+    title: "Sinver: Ecosistema Operativo y de Pedidos (Foodtech SaaS)",
+    description: "Plataforma omnicanal para el sector gastronómico que unifica la tienda en línea con la operación física. Cuenta con una base de datos para el control de inventarios en tiempo real y automatización del flujo de trabajo mediante integración directa con hardware (impresoras), creando una arquitectura lista para escalar como servicio.",
     image: logisticsImg,
-    tags: ["React Native", "Node.js", "Docker"],
+    tags: ["SaaS Architecture", "Hardware Integration", "Database Design", "Order Management System"],
+    link: "#link-falso-sinver",
     span: "md:col-span-2",
     aspect: "aspect-[16/9]",
     accent: "text-neon",
-  },
-  {
-    title: "Marketplace B2B con Matching IA",
-    description: "Plataforma de servicios empresariales con algoritmo de matching y contratación inteligente.",
-    image: marketplaceImg,
-    tags: ["Next.js", "PostgreSQL", "AI"],
-    span: "md:col-span-3",
-    aspect: "aspect-[21/9]",
-    accent: "text-neon-violet",
   },
 ];
 
@@ -67,7 +62,7 @@ export function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {projects.map(({ title, description, image, tags, span, aspect, accent }) => (
+          {projects.map(({ title, description, image, tags, link, span, aspect, accent }) => (
             <article
               key={title}
               className={`${span} group neumo rounded-3xl overflow-hidden transition hover:-translate-y-1 hover:[box-shadow:0_0_48px_-12px_var(--neon),inset_1px_1px_0_0_oklch(1_0_0/8%)] flex flex-col`}
@@ -86,7 +81,7 @@ export function Portfolio() {
 
               <div className="p-6 md:p-7 flex flex-col flex-1">
                 <h3 className="text-xl md:text-2xl font-bold mb-2 tracking-tight">{title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 mb-5">{description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4 mb-5">{description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {tags.map((tag) => (
@@ -97,7 +92,7 @@ export function Portfolio() {
                 </div>
 
                 <a
-                  href="#"
+                  href={link}
                   className={`mt-auto inline-flex items-center gap-1.5 text-sm font-medium ${accent} hover:underline underline-offset-4 transition group/link`}
                 >
                   Ver producto en vivo
