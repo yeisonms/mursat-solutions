@@ -1,16 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import ecommerceImg from "@/assets/portfolio/ecommerce.jpg";
-import travelImg from "@/assets/portfolio/travel.jpg";
-import membershipImg from "@/assets/portfolio/membership.jpg";
-import logisticsImg from "@/assets/portfolio/logistics.jpg";
-import marketplaceImg from "@/assets/portfolio/marketplace.jpg";
+import redfitImg from "@/assets/portfolio/refit.png";
+import annacImg from "@/assets/portfolio/annac.png";
+import memoriesImg from "@/assets/portfolio/memories.png";
+import sinverImg from "@/assets/portfolio/sinver.png";
 
 const projects = [
   {
     title: "RedFit: Plataforma de Gestión y Operación Multi-Sede",
     description: "Arquitectura transaccional para la administración unificada de redes de establecimientos fitness. Desarrollamos los módulos centrales para el seguimiento financiero, el control de membresías y la orquestación de operaciones entre múltiples sedes en tiempo real.",
-    image: membershipImg,
+    image: redfitImg,
     tags: ["Arquitectura Multi-Tenant", "Módulos Financieros", "Optimización SQL", "Gestión de Membresías"],
     link: "#link-falso-redfit",
     span: "md:col-span-2",
@@ -20,7 +19,7 @@ const projects = [
   {
     title: "Annac: Ecosistema Digital para Turismo a la Medida",
     description: "Arquitectura web orientada a la comercialización de servicios turísticos personalizados. La solución destaca por su integración operativa con plataformas de terceros y el despliegue continuo mediante infraestructura escalable (Vercel), priorizando la protección de los usuarios con protocolos de seguridad (SSL).",
-    image: travelImg,
+    image: annacImg,
     tags: ["Integración de Terceros", "Despliegue Serverless", "SSL", "Arquitectura Web"],
     link: "#link-falso-annac",
     span: "md:col-span-1",
@@ -30,7 +29,7 @@ const projects = [
   {
     title: "Memories: Plataforma E-Commerce Transaccional de Alta Gama",
     description: "Arquitectura de comercio electrónico especializada en el sector de joyería premium. El desarrollo se fundamentó en la dirección estricta de requerimientos técnicos y la construcción de módulos avanzados de seguimiento financiero, garantizando transacciones seguras y trazabilidad impecable.",
-    image: ecommerceImg,
+    image: memoriesImg,
     tags: ["Arquitectura E-Commerce", "Trazabilidad Financiera", "Gestión de Requerimientos", "Transacciones Seguras"],
     link: "#link-falso-memories",
     span: "md:col-span-1",
@@ -40,7 +39,7 @@ const projects = [
   {
     title: "Sinver: Ecosistema Operativo y de Pedidos (Foodtech SaaS)",
     description: "Plataforma omnicanal para el sector gastronómico que unifica la tienda en línea con la operación física. Cuenta con una base de datos para el control de inventarios en tiempo real y automatización del flujo de trabajo mediante integración directa con hardware (impresoras), creando una arquitectura lista para escalar como servicio.",
-    image: logisticsImg,
+    image: sinverImg,
     tags: ["SaaS Architecture", "Hardware Integration", "Database Design", "Order Management System"],
     link: "#link-falso-sinver",
     span: "md:col-span-2",
