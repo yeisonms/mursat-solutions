@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "icon",
         type: "image/png",
-        href: "/logo3mursat.png",
+        href: "/mursatcircular.png",
       },
       {
         rel: "stylesheet",
