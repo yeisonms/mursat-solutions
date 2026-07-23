@@ -11,7 +11,7 @@ const projects = [
     description: "Arquitectura transaccional para la administración unificada de redes de establecimientos fitness. Desarrollamos los módulos centrales para el seguimiento financiero, el control de membresías y la orquestación de operaciones entre múltiples sedes en tiempo real.",
     image: redfitImg,
     tags: ["Arquitectura Multi-Tenant", "Módulos Financieros", "Optimización SQL", "Gestión de Membresías"],
-    link: "#link-falso-redfit",
+    link: "https://www.redfit.app/",
     span: "md:col-span-2",
     aspect: "aspect-[16/9]",
     accent: "text-neon",
@@ -21,27 +21,27 @@ const projects = [
     description: "Arquitectura web orientada a la comercialización de servicios turísticos personalizados. La solución destaca por su integración operativa con plataformas de terceros y el despliegue continuo mediante infraestructura escalable (Vercel), priorizando la protección de los usuarios con protocolos de seguridad (SSL).",
     image: annacImg,
     tags: ["Integración de Terceros", "Despliegue Serverless", "SSL", "Arquitectura Web"],
-    link: "#link-falso-annac",
+    link: "https://annacviajesatumedida.com/",
     span: "md:col-span-1",
     aspect: "aspect-[4/3]",
     accent: "text-neon-violet",
   },
   {
-    title: "Memories: Plataforma E-Commerce Transaccional de Alta Gama",
+    title: "Magnaarte: Plataforma E-Commerce Transaccional de Alta Gama",
     description: "Arquitectura de comercio electrónico especializada en el sector de joyería premium. El desarrollo se fundamentó en la dirección estricta de requerimientos técnicos y la construcción de módulos avanzados de seguimiento financiero, garantizando transacciones seguras y trazabilidad impecable.",
     image: memoriesImg,
     tags: ["Arquitectura E-Commerce", "Trazabilidad Financiera", "Gestión de Requerimientos", "Transacciones Seguras"],
-    link: "#link-falso-memories",
+    link: "https://www.magnaarte.com/",
     span: "md:col-span-1",
     aspect: "aspect-[4/3]",
     accent: "text-neon-cyan",
   },
   {
-    title: "Sinver: Ecosistema Operativo y de Pedidos (Foodtech SaaS)",
+    title: "Sirvo: Ecosistema Operativo y de Pedidos (Foodtech SaaS)",
     description: "Plataforma omnicanal para el sector gastronómico que unifica la tienda en línea con la operación física. Cuenta con una base de datos para el control de inventarios en tiempo real y automatización del flujo de trabajo mediante integración directa con hardware (impresoras), creando una arquitectura lista para escalar como servicio.",
     image: sinverImg,
     tags: ["SaaS Architecture", "Hardware Integration", "Database Design", "Order Management System"],
-    link: "#link-falso-sinver",
+    link: "https://sinver-eta.vercel.app/menu",
     span: "md:col-span-2",
     aspect: "aspect-[16/9]",
     accent: "text-neon",
@@ -92,6 +92,8 @@ export function Portfolio() {
 
                 <a
                   href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`mt-auto inline-flex items-center gap-1.5 text-sm font-medium ${accent} hover:underline underline-offset-4 transition group/link`}
                 >
                   Ver producto en vivo

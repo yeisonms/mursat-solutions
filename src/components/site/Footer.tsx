@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Zap } from "lucide-react";
+import { Facebook, Instagram, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,14 +8,14 @@ export function Footer() {
           <img src="/logo3mursat.png" alt="MurSat Solutions" className="h-30 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
         </div>
         <div className="flex items-center gap-3">
-          <a href="mailto:hola@mursat.dev" className="size-10 rounded-full neumo grid place-items-center hover:text-neon transition" aria-label="Email">
+          <a href="mailto:mursatsolutions@gmail.com" className="size-10 rounded-full neumo grid place-items-center hover:text-neon transition" aria-label="Email">
             <Mail className="size-4" />
           </a>
-          <a href="#" className="size-10 rounded-full neumo grid place-items-center hover:text-neon transition" aria-label="LinkedIn">
-            <Linkedin className="size-4" />
+          <a href="https://www.facebook.com/share/1CzXiGHT2A/" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full neumo grid place-items-center hover:text-neon transition" aria-label="Facebook">
+            <Facebook className="size-4" />
           </a>
-          <a href="#" className="size-10 rounded-full neumo grid place-items-center hover:text-neon transition" aria-label="GitHub">
-            <Github className="size-4" />
+          <a href="https://www.instagram.com/mursatsolutions?igsh=MW8zaWFsZG5rcm9vaQ==" target="_blank" rel="noopener noreferrer" className="size-10 rounded-full neumo grid place-items-center hover:text-neon transition" aria-label="Instagram">
+            <Instagram className="size-4" />
           </a>
         </div>
         <div className="text-xs text-muted-foreground">
