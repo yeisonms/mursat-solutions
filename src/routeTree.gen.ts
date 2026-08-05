@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CasosMemoriesMagnaArteRouteImport } from './routes/casos.memories-magna-arte'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasosMemoriesMagnaArteRoute = CasosMemoriesMagnaArteRouteImport.update({
+  id: '/casos/memories-magna-arte',
+  path: '/casos/memories-magna-arte',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/casos/memories-magna-arte'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/casos/memories-magna-arte'
+  id: '__root__' | '/' | '/casos/memories-magna-arte'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CasosMemoriesMagnaArteRoute: typeof CasosMemoriesMagnaArteRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/casos/memories-magna-arte': {
+      id: '/casos/memories-magna-arte'
+      path: '/casos/memories-magna-arte'
+      fullPath: '/casos/memories-magna-arte'
+      preLoaderRoute: typeof CasosMemoriesMagnaArteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CasosMemoriesMagnaArteRoute: CasosMemoriesMagnaArteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

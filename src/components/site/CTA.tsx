@@ -23,25 +23,25 @@ export function CTA() {
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-8 leading-[1.1]">
           <span className="text-white">De la idea al producto.</span>
           <br />
-          <span className="bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-600 bg-clip-text text-transparent">
             Del producto a la escala.
           </span>
         </h2>
         
         {/* Subtítulo */}
-        <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-14 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-zinc-400 font-light leading-relaxed mb-14 max-w-2xl mx-auto">
           Tu próximo producto empieza con una conversación. Cuéntanos qué quieres construir, qué problema necesitas resolver y dónde estás hoy. Te ayudaremos a definir el camino técnico más adecuado.
         </p>
         
         {/* Botón Principal y Micro-copy */}
         <div className="flex flex-col items-center w-full max-w-xs md:max-w-md">
           <BookingModal>
-            <button className="group relative w-full inline-flex items-center justify-center gap-3 px-8 py-5 md:py-6 rounded-full bg-white text-zinc-950 font-extrabold text-lg md:text-xl transition-all duration-300 hover:scale-[1.02] shadow-[0_0_40px_rgba(255,255,255,0.15)] hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] cursor-pointer overflow-hidden">
+            <button className="group relative w-full inline-flex items-center justify-center gap-3 px-8 py-5 md:py-6 rounded-xl bg-white text-zinc-950 font-extrabold text-lg md:text-xl transition-all duration-300 hover:scale-[1.02] shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] cursor-pointer overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">
                 Hablemos de tu producto
                 <ArrowRight className="size-6 group-hover:translate-x-1.5 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-zinc-100 to-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
           </BookingModal>
           <p className="text-sm text-zinc-500 mt-6 font-medium">

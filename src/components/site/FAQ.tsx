@@ -41,7 +41,7 @@ export function FAQ() {
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
             Preguntas Frecuentes
           </h2>
-          <p className="text-lg text-gray-400 font-light">
+          <p className="text-lg text-zinc-400 font-light">
             Claridad total sobre cómo trabajamos.
           </p>
         </div>
@@ -85,7 +85,7 @@ export function FAQ() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <p className="pb-8 pt-2 text-gray-300 text-base md:text-lg leading-relaxed font-light">
+                    <p className="pb-8 pt-2 text-zinc-300 text-base md:text-lg leading-relaxed font-light">
                       {item.a}
                     </p>
                   </div>

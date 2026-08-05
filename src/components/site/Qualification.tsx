@@ -35,7 +35,7 @@ export function Qualification() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-4">
             ¿Dónde está tu producto hoy?
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto">
             Identifica tu escenario. Nosotros definimos el camino técnico.
           </p>
         </div>
@@ -45,7 +45,7 @@ export function Qualification() {
             <a
               key={index}
               href="#contacto"
-              className="group block relative bg-zinc-900/50 rounded-3xl p-8 md:p-10 border border-zinc-800/80 transition-all duration-500 hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_10px_40px_-10px_rgba(6,182,212,0.15)] cursor-pointer"
+              className="group block relative bg-zinc-900/40 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-zinc-800 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-700 hover:shadow-[0_10px_40px_-10px_rgba(6,182,212,0.15)] cursor-pointer"
             >
               {/* Etiqueta del escenario */}
               <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-wider mb-4">
@@ -58,7 +58,7 @@ export function Qualification() {
               </h3>
 
               {/* El Reto */}
-              <div className="flex items-start gap-3 text-gray-400 mb-8">
+              <div className="flex items-start gap-3 text-zinc-400 mb-8">
                 <AlertCircle className="size-5 shrink-0 mt-0.5 text-zinc-500" />
                 <p className="text-sm md:text-base leading-relaxed">
                   {scenario.challenge}
@@ -70,7 +70,7 @@ export function Qualification() {
 
               {/* Solución MurSat */}
               <div className="flex items-end justify-between gap-4">
-                <p className="text-gray-200 text-sm md:text-base font-medium leading-relaxed pr-8">
+                <p className="text-zinc-200 text-sm md:text-base font-medium leading-relaxed pr-8">
                   <span className="text-cyan-400 font-bold block mb-1">Solución MurSat:</span>
                   {scenario.solution}
                 </p>

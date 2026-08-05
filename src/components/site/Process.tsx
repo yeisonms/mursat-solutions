@@ -69,7 +69,7 @@ export function Process() {
                     <h3 className="text-lg md:text-xl font-bold text-cyan-400 tracking-wider mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed text-sm md:text-base font-light">
+                    <p className="text-zinc-400 leading-relaxed text-sm md:text-base font-light">
                       {step.desc}
                     </p>
                   </div>
@@ -90,13 +90,13 @@ export function Process() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6 leading-tight">
                 ¿Tu software ya existe, pero la arquitectura no acompaña el crecimiento?
               </h2>
-              <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-10">
+              <p className="text-lg md:text-xl text-zinc-400 font-light leading-relaxed mb-10">
                 Lideramos la auditoría técnica, refactorización, optimización de performance, arquitectura Cloud y evolución de productos digitales existentes.
               </p>
               
               <div>
                 <BookingModal>
-                  <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-zinc-950 font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] cursor-pointer">
+                  <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-zinc-950 font-bold text-lg hover:bg-zinc-200 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] cursor-pointer">
                     Auditar mi arquitectura
                     <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -105,7 +105,7 @@ export function Process() {
             </div>
 
             {/* Columna Derecha: Problemas que resolvemos */}
-            <div className="bg-zinc-950/50 rounded-3xl p-8 md:p-12 border border-zinc-800/60 shadow-2xl">
+            <div className="bg-zinc-900/40 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-zinc-800 shadow-2xl transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1">
               <h3 className="text-xl font-semibold text-white mb-8 border-b border-zinc-800 pb-4">
                 Problemas que resolvemos:
               </h3>

@@ -52,8 +52,8 @@ export function BookingModal({
             className={cn(
               "cursor-pointer",
               triggerVariant === "primary"
-                ? "group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold glow-neon hover:scale-[1.02] transition"
-                : "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full neumo border border-border/60 font-semibold hover:border-neon/60 transition",
+                ? "group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-white text-zinc-950 font-bold hover:bg-zinc-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+                : "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-zinc-700 bg-transparent text-zinc-300 font-semibold hover:bg-zinc-800 transition-colors",
               className
             )}
           >

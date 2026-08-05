@@ -11,7 +11,7 @@ export function Hero() {
         
         <div className="relative max-w-5xl mx-auto text-center z-10">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-xs font-semibold text-gray-300 tracking-[0.2em] uppercase mb-10 animate-fade-in backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/50 border border-zinc-800 text-[10px] sm:text-xs font-semibold text-zinc-300 tracking-[0.2em] uppercase mb-10 animate-fade-in backdrop-blur-md">
             <Sparkles className="size-4 text-cyan-400" />
             Boutique Software Engineering · AI · SaaS · Cloud
           </div>
@@ -28,7 +28,7 @@ export function Hero() {
           </h1>
           
           {/* Párrafo descriptivo */}
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 animate-slide-up font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-12 animate-slide-up font-light leading-relaxed">
             Ingeniería de software a la medida, integración de IA y arquitecturas ágiles para startups que necesitan moverse rápido sin sacrificar calidad.
           </p>
           
@@ -50,13 +50,13 @@ export function Hero() {
           </h2>
           
           {/* Texto gris descriptivo */}
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-20 font-light">
+          <p className="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto mb-20 font-light leading-relaxed">
             Sistemas transaccionales, plataformas SaaS, MVPs e infraestructura preparada para crecer.
           </p>
           
           {/* Línea divisoria tenue y lista horizontal */}
-          <div className="border-t border-white/5 pt-12 max-w-4xl mx-auto">
-            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-sm md:text-lg font-mono text-gray-500 tracking-widest uppercase">
+          <div className="border-t border-zinc-800 pt-12 max-w-4xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-sm md:text-lg font-mono text-zinc-500 tracking-widest uppercase">
               <span>MVPs</span>
               <span className="hidden md:inline text-white/10">•</span>
               <span>SaaS</span>

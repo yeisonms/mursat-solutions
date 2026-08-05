@@ -17,7 +17,7 @@ export function Leadership() {
         <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">
           Ingeniería senior. Sin capas innecesarias.
         </h2>
-        <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-16 max-w-3xl">
+        <p className="text-lg md:text-xl text-zinc-400 font-light leading-relaxed mb-16 max-w-3xl">
           En MurSat Solutions trabajas directamente con profesionales que entienden de arquitectura, de negocio y de ejecución. Menos intermediarios significa mayor precisión y mejores decisiones técnicas para tu producto.
         </p>
 
@@ -26,7 +26,7 @@ export function Leadership() {
           {credentials.map(({ icon: Icon, label }, i) => (
             <div
               key={i}
-              className={`flex items-center gap-4 bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800/60 shadow-lg ${
+              className={`flex items-center gap-4 bg-zinc-900/40 backdrop-blur-md p-6 rounded-2xl border border-zinc-800 shadow-lg transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 ${
                 i === credentials.length - 1 ? "md:col-span-2 md:w-1/2 md:mx-auto" : ""
               }`}
             >

@@ -37,7 +37,7 @@ export function WhyMursat() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-6 leading-tight">
               ¿Por qué MurSat?
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed max-w-md">
+            <p className="text-lg md:text-xl text-zinc-400 font-light leading-relaxed max-w-md">
               Razones técnicas y estratégicas para confiarnos tu producto digital.
             </p>
           </div>
@@ -61,7 +61,7 @@ export function WhyMursat() {
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {reason.title}
                   </h3>
-                  <p className="text-gray-300 text-lg font-light leading-relaxed">
+                  <p className="text-zinc-400 text-lg font-light leading-relaxed">
                     {reason.desc}
                   </p>
                 </div>

@@ -51,7 +51,7 @@ export function Capabilities() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white mb-4">
             Nuestras Capacidades
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto">
             Ingeniería de élite diseñada para el ciclo de vida de tu producto.
           </p>
         </div>
@@ -61,7 +61,7 @@ export function Capabilities() {
             <div
               key={cap.id}
               className={cn(
-                "group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-zinc-950/50 backdrop-blur-xl border border-zinc-800 p-8 md:p-10 transition-all duration-500 hover:border-cyan-500/50 hover:shadow-[0_0_30px_-10px_rgba(6,182,212,0.15)]",
+                "group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-zinc-900/40 backdrop-blur-md border border-zinc-800 p-8 md:p-10 transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-[0_0_30px_-10px_rgba(6,182,212,0.15)]",
                 cap.className,
                 "animate-slide-up"
               )}
@@ -75,13 +75,13 @@ export function Capabilities() {
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight tracking-tight">
                   {cap.title}
                 </h3>
-                <p className="text-base md:text-lg text-gray-400 leading-relaxed font-light">
+                <p className="text-base md:text-lg text-zinc-400 leading-relaxed font-light">
                   {cap.description}
                 </p>
               </div>
 
-              <div className="mt-10 rounded-xl bg-zinc-900/80 p-5 border border-zinc-800/50 group-hover:border-zinc-700/80 transition-colors">
-                <p className="text-sm md:text-base text-gray-300 font-medium flex items-center">
+              <div className="mt-10 rounded-xl bg-zinc-950/80 p-5 border border-zinc-800 group-hover:border-zinc-700 transition-colors">
+                <p className="text-sm md:text-base text-zinc-300 font-medium flex items-center">
                   <span className="text-cyan-500 mr-3 text-lg leading-none">↳</span>
                   {cap.result}
                 </p>

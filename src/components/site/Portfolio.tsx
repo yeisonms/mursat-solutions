@@ -3,6 +3,7 @@ import redfitImg from "@/assets/portfolio/refit.png";
 import annacImg from "@/assets/portfolio/annac.png";
 import memoriesImg from "@/assets/portfolio/memories.png";
 import sinverImg from "@/assets/portfolio/sinver.png";
+import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 
 const caseStudies = [
@@ -33,7 +34,7 @@ const caseStudies = [
     link: "https://annacviajesatumedida.com/",
   },
   {
-    title: "Caso 03: Memories / Magna Arte",
+    title: "Caso 03: Memories",
     challenge: "Crear un ecosistema de comercio electrónico de alta gama para joyería premium, exigiendo trazabilidad financiera absoluta y control de inventario de alto valor.",
     built: [
       "Arquitectura E-commerce transaccional.",
@@ -43,7 +44,8 @@ const caseStudies = [
     ],
     result: "Una plataforma comercial robusta con control transaccional total, diseñada para manejar operaciones financieras de alto ticket sin margen de error.",
     image: memoriesImg,
-    link: "https://www.magnaarte.com/",
+    link: "/casos/memories-magna-arte",
+    isInternal: true,
   },
   {
     title: "Caso 04: Sinver (Foodtech)",
@@ -70,7 +72,7 @@ export function Portfolio() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-4">
             Casos de Estudio
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto">
             Ingeniería real para problemas de negocio reales.
           </p>
         </div>
@@ -89,7 +91,7 @@ export function Portfolio() {
               >
                 {/* Lado Visual (Imagen/Mockup) */}
                 <div className="w-full lg:w-1/2">
-                  <div className="relative aspect-video rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(6,182,212,0.15)] bg-zinc-900 border border-zinc-800/60 group cursor-pointer transition-all duration-700 hover:shadow-[0_20px_60px_rgba(6,182,212,0.25)] hover:-translate-y-2">
+                  <div className="relative aspect-video rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(6,182,212,0.15)] bg-zinc-900/40 backdrop-blur-md border border-zinc-800 group cursor-pointer transition-all duration-700 hover:shadow-[0_20px_60px_rgba(6,182,212,0.25)] hover:-translate-y-2">
                     <img
                       src={project.image}
                       alt={`Arquitectura y producto de ${project.title}`}
@@ -109,7 +111,7 @@ export function Portfolio() {
                   
                   {/* Desafío */}
                   <div className="mb-8">
-                    <p className="text-gray-400 leading-relaxed font-light text-lg">
+                    <p className="text-zinc-400 leading-relaxed font-light text-lg">
                       {project.challenge}
                     </p>
                   </div>
@@ -123,15 +125,15 @@ export function Portfolio() {
                       {project.built.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <Zap className="size-5 text-cyan-400 shrink-0 mt-0.5" />
-                          <span className="text-gray-300 font-light">{item}</span>
+                          <span className="text-zinc-300 font-light">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   {/* Resultado (Impacto de Negocio) */}
-                  <div className="bg-zinc-900/60 border-l-2 border-cyan-500 p-5 rounded-r-xl mb-10 shadow-lg">
-                    <p className="text-gray-200 font-medium text-sm md:text-base leading-relaxed">
+                  <div className="bg-zinc-900/40 backdrop-blur-md border-l-2 border-cyan-500 p-5 rounded-r-xl mb-10 shadow-lg border border-zinc-800 border-l-cyan-500">
+                    <p className="text-zinc-200 font-medium text-sm md:text-base leading-relaxed">
                       <span className="text-cyan-400 font-bold block mb-1">Impacto:</span>
                       {project.result}
                     </p>
@@ -139,19 +141,33 @@ export function Portfolio() {
                   
                   {/* Botón de Acción */}
                   <div>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Ver caso de estudio de ${project.title}`}
-                      className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-lg hover:text-cyan-300 transition-colors group"
-                    >
-                      <span className="relative">
-                        Ver caso de estudio
-                        <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-                      </span>
-                      <ArrowUpRight className="size-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </a>
+                    {project.isInternal ? (
+                      <Link
+                        to={project.link}
+                        aria-label={`Ver caso de estudio de ${project.title}`}
+                        className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-lg hover:text-cyan-300 transition-colors group"
+                      >
+                        <span className="relative">
+                          Ver caso de estudio
+                          <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                        <ArrowUpRight className="size-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </Link>
+                    ) : (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Ver caso de estudio de ${project.title}`}
+                        className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-lg hover:text-cyan-300 transition-colors group"
+                      >
+                        <span className="relative">
+                          Ver caso de estudio
+                          <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                        <ArrowUpRight className="size-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>

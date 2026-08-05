@@ -57,14 +57,14 @@ const techs = [
 export function TechMarquee() {
   const loop = [...techs, ...techs];
   return (
-    <section className="relative py-10 border-y border-border/40 overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
+    <section className="relative py-10 border-y border-zinc-800 overflow-hidden bg-zinc-950">
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-zinc-950 to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-zinc-950 to-transparent z-10" />
       <div className="flex gap-16 animate-marquee whitespace-nowrap">
         {loop.map((t, i) => (
           <div
             key={`${t.name}-${i}`}
-            className="flex items-center gap-3 text-muted-foreground/60 hover:text-foreground transition-colors"
+            className="flex items-center gap-3 text-zinc-500 hover:text-white transition-colors"
           >
             <span className="size-7 shrink-0">{t.svg}</span>
             <span className="font-display text-lg tracking-tight">{t.name}</span>
