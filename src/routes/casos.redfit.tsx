@@ -46,8 +46,9 @@ function CaseStudy() {
 
   const slides = [
     { id: 1, img: redfitImg, label: "Dashboard administrativo global" },
-    { id: 2, img: redfitImg, label: "Control de membresías" },
-    { id: 3, img: redfitImg, label: "Vista Móvil Puntos de Venta" }
+    { id: 2, img: "/mursat2.png", label: "Control de membresías" },
+    { id: 3, img: "/mursat3.png", label: "Vista Móvil Puntos de Venta" },
+    { id: 4, img: "/mursat4.png", label: "Estadísticas y Reportes" }
   ];
 
   return (

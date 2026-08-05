@@ -10,12 +10,19 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CasosSinverRouteImport } from './routes/casos.sinver'
 import { Route as CasosRedfitRouteImport } from './routes/casos.redfit'
 import { Route as CasosMemoriesMagnaArteRouteImport } from './routes/casos.memories-magna-arte'
+import { Route as CasosAnnacRouteImport } from './routes/casos.annac'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasosSinverRoute = CasosSinverRouteImport.update({
+  id: '/casos/sinver',
+  path: '/casos/sinver',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasosRedfitRoute = CasosRedfitRouteImport.update({
@@ -28,35 +35,64 @@ const CasosMemoriesMagnaArteRoute = CasosMemoriesMagnaArteRouteImport.update({
   path: '/casos/memories-magna-arte',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasosAnnacRoute = CasosAnnacRouteImport.update({
+  id: '/casos/annac',
+  path: '/casos/annac',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/casos/annac': typeof CasosAnnacRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
   '/casos/redfit': typeof CasosRedfitRoute
+  '/casos/sinver': typeof CasosSinverRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/casos/annac': typeof CasosAnnacRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
   '/casos/redfit': typeof CasosRedfitRoute
+  '/casos/sinver': typeof CasosSinverRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/casos/annac': typeof CasosAnnacRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
   '/casos/redfit': typeof CasosRedfitRoute
+  '/casos/sinver': typeof CasosSinverRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/casos/memories-magna-arte' | '/casos/redfit'
+  fullPaths:
+    | '/'
+    | '/casos/annac'
+    | '/casos/memories-magna-arte'
+    | '/casos/redfit'
+    | '/casos/sinver'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/casos/memories-magna-arte' | '/casos/redfit'
-  id: '__root__' | '/' | '/casos/memories-magna-arte' | '/casos/redfit'
+  to:
+    | '/'
+    | '/casos/annac'
+    | '/casos/memories-magna-arte'
+    | '/casos/redfit'
+    | '/casos/sinver'
+  id:
+    | '__root__'
+    | '/'
+    | '/casos/annac'
+    | '/casos/memories-magna-arte'
+    | '/casos/redfit'
+    | '/casos/sinver'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CasosAnnacRoute: typeof CasosAnnacRoute
   CasosMemoriesMagnaArteRoute: typeof CasosMemoriesMagnaArteRoute
   CasosRedfitRoute: typeof CasosRedfitRoute
+  CasosSinverRoute: typeof CasosSinverRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -66,6 +102,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casos/sinver': {
+      id: '/casos/sinver'
+      path: '/casos/sinver'
+      fullPath: '/casos/sinver'
+      preLoaderRoute: typeof CasosSinverRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos/redfit': {
@@ -82,13 +125,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CasosMemoriesMagnaArteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/casos/annac': {
+      id: '/casos/annac'
+      path: '/casos/annac'
+      fullPath: '/casos/annac'
+      preLoaderRoute: typeof CasosAnnacRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CasosAnnacRoute: CasosAnnacRoute,
   CasosMemoriesMagnaArteRoute: CasosMemoriesMagnaArteRoute,
   CasosRedfitRoute: CasosRedfitRoute,
+  CasosSinverRoute: CasosSinverRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

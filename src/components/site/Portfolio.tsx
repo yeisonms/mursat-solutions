@@ -32,7 +32,8 @@ const caseStudies = [
     ],
     result: "Un ecosistema digital seguro y de alta disponibilidad que unifica la operación turística y protege la información de los usuarios.",
     image: annacImg,
-    link: "https://annacviajesatumedida.com/",
+    link: "/casos/annac",
+    isInternal: true,
   },
   {
     title: "Caso 03: Memories",
@@ -59,7 +60,8 @@ const caseStudies = [
     ],
     result: "Un ecosistema operativo automatizado que elimina cuellos de botella en la producción y cuenta con una arquitectura base lista para comercializarse a otros establecimientos.",
     image: sinverImg,
-    link: "https://sinver-eta.vercel.app/menu",
+    link: "/casos/sinver",
+    isInternal: true,
   },
 ];
 
