@@ -18,7 +18,8 @@ const caseStudies = [
     ],
     result: "Una plataforma centralizada y escalable, preparada para operar múltiples sedes comerciales sin discrepancias de datos.",
     image: redfitImg,
-    link: "https://www.redfit.app/",
+    link: "/casos/redfit",
+    isInternal: true,
   },
   {
     title: "Caso 02: Annac (Turismo a la medida)",

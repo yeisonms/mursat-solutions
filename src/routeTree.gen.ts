@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CasosRedfitRouteImport } from './routes/casos.redfit'
 import { Route as CasosMemoriesMagnaArteRouteImport } from './routes/casos.memories-magna-arte'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasosRedfitRoute = CasosRedfitRouteImport.update({
+  id: '/casos/redfit',
+  path: '/casos/redfit',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasosMemoriesMagnaArteRoute = CasosMemoriesMagnaArteRouteImport.update({
@@ -26,27 +32,31 @@ const CasosMemoriesMagnaArteRoute = CasosMemoriesMagnaArteRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
+  '/casos/redfit': typeof CasosRedfitRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
+  '/casos/redfit': typeof CasosRedfitRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
+  '/casos/redfit': typeof CasosRedfitRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/casos/memories-magna-arte'
+  fullPaths: '/' | '/casos/memories-magna-arte' | '/casos/redfit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/casos/memories-magna-arte'
-  id: '__root__' | '/' | '/casos/memories-magna-arte'
+  to: '/' | '/casos/memories-magna-arte' | '/casos/redfit'
+  id: '__root__' | '/' | '/casos/memories-magna-arte' | '/casos/redfit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CasosMemoriesMagnaArteRoute: typeof CasosMemoriesMagnaArteRoute
+  CasosRedfitRoute: typeof CasosRedfitRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casos/redfit': {
+      id: '/casos/redfit'
+      path: '/casos/redfit'
+      fullPath: '/casos/redfit'
+      preLoaderRoute: typeof CasosRedfitRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos/memories-magna-arte': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CasosMemoriesMagnaArteRoute: CasosMemoriesMagnaArteRoute,
+  CasosRedfitRoute: CasosRedfitRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
