@@ -143,6 +143,7 @@ export function Portfolio() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Ver caso de estudio de ${project.title}`}
                       className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-lg hover:text-cyan-300 transition-colors group"
                     >
                       <span className="relative">

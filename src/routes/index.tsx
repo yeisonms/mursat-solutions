@@ -16,18 +16,30 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MurSat Solutions — Ingeniería boutique para startups AI-powered" },
-      { name: "description", content: "Convertimos ideas audaces en productos digitales escalables. MVPs, integración de IA, Clean Architecture y DevOps para startups que necesitan moverse rápido." },
-      { property: "og:title", content: "MurSat Solutions — Boutique Engineering" },
-      { property: "og:description", content: "Software a la medida, IA y arquitecturas ágiles para startups." },
+      { title: "MurSat Solutions | Ingeniería de Software, SaaS y MVPs" },
+      { name: "description", content: "Construimos ecosistemas digitales escalables y MVPs para startups. Especialistas en desarrollo web B2B, Inteligencia Artificial y arquitectura Cloud/DevOps." },
+      { name: "keywords", content: "ingeniería de software, desarrollo SaaS, MVPs para startups, desarrollo web a la medida, arquitectura cloud, integración inteligencia artificial, clean architecture, consultoría tecnológica" },
+      { property: "og:title", content: "MurSat Solutions: De la idea al producto. Del producto a la escala." },
+      { property: "og:description", content: "No construimos páginas web, construimos productos digitales. Ingeniería de software, plataformas SaaS y soluciones impulsadas por IA para empresas que necesitan escalar." },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://mursatsolutions.com/og-image.jpg" },
     ],
   }),
   component: Index,
 });
 
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "MurSat Solutions",
+  "description": "Construimos ecosistemas digitales escalables y MVPs para startups. Especialistas en desarrollo web B2B, Inteligencia Artificial y arquitectura Cloud/DevOps.",
+  "url": "https://mursatsolutions.com"
+};
+
 function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground antialiased font-sans">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
