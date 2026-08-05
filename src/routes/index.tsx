@@ -9,6 +9,7 @@ import { Process } from "@/components/site/Process";
 import { Leadership } from "@/components/site/Leadership";
 
 import { FAQ } from "@/components/site/FAQ";
+import { Qualification } from "@/components/site/Qualification";
 import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
 
@@ -43,6 +44,7 @@ function Index() {
       <Leadership />
 
       <FAQ />
+      <Qualification />
       <CTA />
       <Footer />
     </main>
