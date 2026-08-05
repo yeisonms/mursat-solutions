@@ -3,7 +3,6 @@ import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { TechMarquee } from "@/components/site/TechMarquee";
 import { WhyMursat } from "@/components/site/WhyMursat";
-import { Services } from "@/components/site/Services";
 import { Capabilities } from "@/components/site/Capabilities";
 import { Portfolio } from "@/components/site/Portfolio";
 import { Process } from "@/components/site/Process";
@@ -40,7 +39,6 @@ function Index() {
       <TechMarquee />
       <WhyMursat />
       <Capabilities />
-      <Services />
       <Portfolio />
       <Process />
       <Leadership />
