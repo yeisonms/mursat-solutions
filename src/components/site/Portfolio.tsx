@@ -2,7 +2,7 @@ import { ArrowUpRight, Zap } from "lucide-react";
 import redfitImg from "@/assets/portfolio/refit.png";
 import annacImg from "@/assets/portfolio/annac.png";
 import memoriesImg from "@/assets/portfolio/memories.png";
-import sinverImg from "@/assets/portfolio/sinver.png";
+import sirvoImg from "@/assets/portfolio/sirvo.png";
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 
@@ -50,7 +50,7 @@ const caseStudies = [
     isInternal: true,
   },
   {
-    title: "Caso 04: Sinver (Foodtech)",
+    title: "Caso 04: Sirvo (Foodtech)",
     challenge: "Unificar la experiencia de pedidos en línea con la operación física de un restaurante, mitigando el caos en la cocina y sincronizando inventarios.",
     built: [
       "Arquitectura SaaS omnicanal.",
@@ -59,17 +59,31 @@ const caseStudies = [
       "Sistema centralizado de gestión de pedidos (OMS)."
     ],
     result: "Un ecosistema operativo automatizado que elimina cuellos de botella en la producción y cuenta con una arquitectura base lista para comercializarse a otros establecimientos.",
-    image: sinverImg,
-    link: "/casos/sinver",
+    image: sirvoImg,
+    link: "/casos/sirvo",
     isInternal: true,
   },
+  {
+    title: "Caso 05: MercaCredito (Fintech SaaS)",
+    challenge: "Digitalizar los libros contables, controlar rutas de cobranza y automatizar comisiones para empresas que venden productos a plazos.",
+    built: [
+      "Motor de Liquidación Automático de Comisiones.",
+      "Sistema de Escalamiento de Morosidad.",
+      "Ingestión de datos para Historial inmutable.",
+      "Orquestación y geolocalización de Rutas."
+    ],
+    result: "Un SaaS integral que asegura el recaudo, elimina el fraude en caja y transparenta toda la cartera activa en tiempo real.",
+    image: "/merca1.png",
+    link: "/casos/mercacredito",
+    isInternal: true,
+  }
 ];
 
 export function Portfolio() {
   return (
     <section id="portafolio" className="relative py-32 px-6 bg-zinc-950 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Encabezado */}
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-4">
@@ -85,8 +99,8 @@ export function Portfolio() {
           {caseStudies.map((project, index) => {
             const isEven = index % 2 === 0;
             return (
-              <article 
-                key={project.title} 
+              <article
+                key={project.title}
                 className={cn(
                   "flex flex-col gap-12 lg:gap-20 items-center",
                   isEven ? "lg:flex-row" : "lg:flex-row-reverse"
@@ -111,14 +125,14 @@ export function Portfolio() {
                   <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6 leading-tight">
                     {project.title}
                   </h3>
-                  
+
                   {/* Desafío */}
                   <div className="mb-8">
                     <p className="text-zinc-400 leading-relaxed font-light text-lg">
                       {project.challenge}
                     </p>
                   </div>
-                  
+
                   {/* Lo que construimos */}
                   <div className="mb-10">
                     <h4 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
@@ -133,7 +147,7 @@ export function Portfolio() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   {/* Resultado (Impacto de Negocio) */}
                   <div className="bg-zinc-900/40 backdrop-blur-md border-l-2 border-cyan-500 p-5 rounded-r-xl mb-10 shadow-lg border border-zinc-800 border-l-cyan-500">
                     <p className="text-zinc-200 font-medium text-sm md:text-base leading-relaxed">
@@ -141,7 +155,7 @@ export function Portfolio() {
                       {project.result}
                     </p>
                   </div>
-                  
+
                   {/* Botón de Acción */}
                   <div>
                     {project.isInternal ? (

@@ -5,13 +5,13 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { BookingModal } from "@/components/site/BookingModal";
 import { ArrowLeft, ArrowRight, Zap, Server, Shield, Database, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
-import sinverImg from "@/assets/portfolio/sinver.png";
+import sirvoImg from "@/assets/portfolio/sirvo.png"; // Forzar recarga de Vite
 
-export const Route = createFileRoute("/casos/sinver")({
+export const Route = createFileRoute("/casos/sirvo")({
   component: CaseStudy,
   head: () => ({
     meta: [
-      { title: "Caso de Estudio: Sinver | MurSat Solutions" },
+      { title: "Caso de Estudio: Sirvo | MurSat Solutions" },
       {
         name: "description",
         content:
@@ -45,17 +45,16 @@ function CaseStudy() {
   }, [emblaApi, onSelect]);
 
   const slides = [
-    { id: 1, img: sinverImg, label: "Portal de Pedidos Digital" },
-    { id: 2, img: "/sinver1.jpeg", label: "Menú Interactivo" },
-    { id: 3, img: "/sinver2.jpeg", label: "Kitchen Display System" },
-    { id: 4, img: "/sinver3.jpeg", label: "Control de Inventario" },
-    { id: 5, img: "/sinver4.jpeg", label: "Vista Móvil" }
+    { id: 1, img: sirvoImg, label: "Portal de Pedidos Digital" },
+    { id: 2, img: "/sirvo2.png", label: "Kitchen Display System" },
+    { id: 3, img: "/sirvo3.png", label: "Control de Inventario" },
+    { id: 4, img: "/sirvo4.png", label: "Vista Móvil" }
   ];
 
   return (
     <main className="min-h-screen bg-zinc-950 text-foreground antialiased font-sans">
       <Nav />
-      
+
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
@@ -75,7 +74,7 @@ function CaseStudy() {
 
           {/* Título y Subtítulo */}
           <h1 className="text-5xl md:text-6xl font-bold tracking-tighter text-white mb-6 leading-tight max-w-4xl">
-            La Sinvergüencería Burger
+            Sirvo Burger
           </h1>
           <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-3xl leading-relaxed mb-16">
             Arquitectura omnicanal para unificar pedidos digitales y la operación de cocina en tiempo real.
@@ -97,7 +96,7 @@ function CaseStudy() {
                 ))}
               </div>
             </div>
-            
+
             {/* Carousel Controls */}
             <button
               onClick={scrollPrev}
@@ -120,9 +119,8 @@ function CaseStudy() {
                 <button
                   key={slide.id}
                   onClick={() => emblaApi?.scrollTo(index)}
-                  className={`group relative flex flex-col items-center gap-2 cursor-pointer transition-all duration-300 ${
-                    selectedIndex === index ? "w-8 opacity-100" : "w-2 opacity-50 hover:opacity-80"
-                  }`}
+                  className={`group relative flex flex-col items-center gap-2 cursor-pointer transition-all duration-300 ${selectedIndex === index ? "w-8 opacity-100" : "w-2 opacity-50 hover:opacity-80"
+                    }`}
                   aria-label={`Ir a ${slide.label}`}
                 >
                   <div className={`h-1.5 rounded-full bg-white transition-all duration-300 ${selectedIndex === index ? "w-8" : "w-2"}`} />
@@ -136,13 +134,13 @@ function CaseStudy() {
       {/* Body: Dos Columnas */}
       <section className="relative py-20 px-6 border-b border-zinc-800/50">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 relative items-start">
-          
+
           {/* Columna Izquierda (Sticky): Metadata, Tecnologías, Servicios */}
           <div className="w-full lg:w-[30%] lg:sticky lg:top-24 flex flex-col gap-10">
-            
+
             {/* Botones de Acción */}
             <div className="flex flex-col gap-4">
-              <a 
+              <a
                 href="https://sinver-eta.vercel.app/menu"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -157,7 +155,7 @@ function CaseStudy() {
                 </button>
               </BookingModal>
             </div>
-            
+
             {/* Tecnologías */}
             <div>
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-5">
@@ -199,12 +197,12 @@ function CaseStudy() {
                 </li>
               </ul>
             </div>
-            
+
           </div>
 
           {/* Columna Derecha (Scroll): Narrativa */}
           <div className="w-full lg:w-[70%] flex flex-col prose prose-invert max-w-none">
-            
+
             {/* Contexto y Problema */}
             <div className="mb-16">
               <h3 className="text-3xl font-bold text-white tracking-tight mb-6 mt-0">
@@ -212,7 +210,7 @@ function CaseStudy() {
               </h3>
               <div className="space-y-6 text-lg text-zinc-300 font-light leading-relaxed">
                 <p>
-                  Los restaurantes de alto volumen sufren de un quiebre operativo entre los pedidos digitales y la ejecución física, generando caos en la cocina y descuadres en el inventario. Sinver requería una solución tecnológica que sincronizara ambos mundos sin fricción.
+                  Los restaurantes de alto volumen sufren de un quiebre operativo entre los pedidos digitales y la ejecución física, generando caos en la cocina y descuadres en el inventario. sirvo requería una solución tecnológica que sincronizara ambos mundos sin fricción.
                 </p>
               </div>
             </div>

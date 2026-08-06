@@ -10,8 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as CasosSinverRouteImport } from './routes/casos.sinver'
+import { Route as CasosSirvoRouteImport } from './routes/casos.sirvo'
 import { Route as CasosRedfitRouteImport } from './routes/casos.redfit'
+import { Route as CasosMercacreditoRouteImport } from './routes/casos.mercacredito'
 import { Route as CasosMemoriesMagnaArteRouteImport } from './routes/casos.memories-magna-arte'
 import { Route as CasosAnnacRouteImport } from './routes/casos.annac'
 
@@ -20,14 +21,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CasosSinverRoute = CasosSinverRouteImport.update({
-  id: '/casos/sinver',
-  path: '/casos/sinver',
+const CasosSirvoRoute = CasosSirvoRouteImport.update({
+  id: '/casos/sirvo',
+  path: '/casos/sirvo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasosRedfitRoute = CasosRedfitRouteImport.update({
   id: '/casos/redfit',
   path: '/casos/redfit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasosMercacreditoRoute = CasosMercacreditoRouteImport.update({
+  id: '/casos/mercacredito',
+  path: '/casos/mercacredito',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasosMemoriesMagnaArteRoute = CasosMemoriesMagnaArteRouteImport.update({
@@ -45,23 +51,26 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/casos/annac': typeof CasosAnnacRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
+  '/casos/mercacredito': typeof CasosMercacreditoRoute
   '/casos/redfit': typeof CasosRedfitRoute
-  '/casos/sinver': typeof CasosSinverRoute
+  '/casos/sirvo': typeof CasosSirvoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/casos/annac': typeof CasosAnnacRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
+  '/casos/mercacredito': typeof CasosMercacreditoRoute
   '/casos/redfit': typeof CasosRedfitRoute
-  '/casos/sinver': typeof CasosSinverRoute
+  '/casos/sirvo': typeof CasosSirvoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/casos/annac': typeof CasosAnnacRoute
   '/casos/memories-magna-arte': typeof CasosMemoriesMagnaArteRoute
+  '/casos/mercacredito': typeof CasosMercacreditoRoute
   '/casos/redfit': typeof CasosRedfitRoute
-  '/casos/sinver': typeof CasosSinverRoute
+  '/casos/sirvo': typeof CasosSirvoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -69,30 +78,34 @@ export interface FileRouteTypes {
     | '/'
     | '/casos/annac'
     | '/casos/memories-magna-arte'
+    | '/casos/mercacredito'
     | '/casos/redfit'
-    | '/casos/sinver'
+    | '/casos/sirvo'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/casos/annac'
     | '/casos/memories-magna-arte'
+    | '/casos/mercacredito'
     | '/casos/redfit'
-    | '/casos/sinver'
+    | '/casos/sirvo'
   id:
     | '__root__'
     | '/'
     | '/casos/annac'
     | '/casos/memories-magna-arte'
+    | '/casos/mercacredito'
     | '/casos/redfit'
-    | '/casos/sinver'
+    | '/casos/sirvo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CasosAnnacRoute: typeof CasosAnnacRoute
   CasosMemoriesMagnaArteRoute: typeof CasosMemoriesMagnaArteRoute
+  CasosMercacreditoRoute: typeof CasosMercacreditoRoute
   CasosRedfitRoute: typeof CasosRedfitRoute
-  CasosSinverRoute: typeof CasosSinverRoute
+  CasosSirvoRoute: typeof CasosSirvoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -104,11 +117,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/casos/sinver': {
-      id: '/casos/sinver'
-      path: '/casos/sinver'
-      fullPath: '/casos/sinver'
-      preLoaderRoute: typeof CasosSinverRouteImport
+    '/casos/sirvo': {
+      id: '/casos/sirvo'
+      path: '/casos/sirvo'
+      fullPath: '/casos/sirvo'
+      preLoaderRoute: typeof CasosSirvoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos/redfit': {
@@ -116,6 +129,13 @@ declare module '@tanstack/react-router' {
       path: '/casos/redfit'
       fullPath: '/casos/redfit'
       preLoaderRoute: typeof CasosRedfitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casos/mercacredito': {
+      id: '/casos/mercacredito'
+      path: '/casos/mercacredito'
+      fullPath: '/casos/mercacredito'
+      preLoaderRoute: typeof CasosMercacreditoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos/memories-magna-arte': {
@@ -139,8 +159,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CasosAnnacRoute: CasosAnnacRoute,
   CasosMemoriesMagnaArteRoute: CasosMemoriesMagnaArteRoute,
+  CasosMercacreditoRoute: CasosMercacreditoRoute,
   CasosRedfitRoute: CasosRedfitRoute,
-  CasosSinverRoute: CasosSinverRoute,
+  CasosSirvoRoute: CasosSirvoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

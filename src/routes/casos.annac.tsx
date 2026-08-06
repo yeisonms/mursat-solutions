@@ -46,8 +46,9 @@ function CaseStudy() {
 
   const slides = [
     { id: 1, img: annacImg, label: "Portal Web de Reservas" },
-    { id: 2, img: "/annac1.png", label: "Panel de Gestión Turística" },
-    { id: 3, img: "/annac2.png", label: "Detalles del Tour" }
+    { id: 2, img: "/annacv2.png", label: "Panel de Gestión Turística" },
+    { id: 3, img: "/annacv3.png", label: "Detalles del Tour" },
+    { id: 4, img: "/annacv4.png", label: "Vista Móvil" }
   ];
 
   return (
