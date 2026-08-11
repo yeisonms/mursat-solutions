@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "¿Cuál es su stack tecnológico principal?",
-    a: "Seleccionamos la herramienta adecuada para el problema, pero nos especializamos en ecosistemas escalables de alto rendimiento. Desarrollamos interfaces fluidas con React y Next.js, y construimos lógicas de negocio robustas utilizando .NET o Node.js, respaldadas por bases de datos SQL relacionales. Desplegamos toda la infraestructura en entornos Cloud (Azure, AWS o plataformas serverless) aplicando siempre principios de Clean Architecture y SOLID.",
+    a: "Seleccionamos la herramienta adecuada para el problema, pero nos especializamos en ecosistemas escalables de alto rendimiento. Desarrollamos interfaces fluidas con React y Next.js, y construimos lógicas de negocio robustas utilizando .NET o Node.js, respaldadas por bases de datos SQL relacionales. Desplegamos toda la infraestructura en entornos Cloud (Azure, AWS, Vercel) aplicando siempre principios de Clean Architecture y SOLID.",
   },
   {
     q: "¿Quién es el dueño del código y la propiedad intelectual?",

@@ -21,8 +21,8 @@ const capabilities = [
     id: "03",
     label: "ARCHITECT",
     title: "Fundaciones a prueba de fallos.",
-    description: "Arquitectura Clean, microservicios y bases de datos optimizadas para soportar alta transaccionalidad sin cuellos de botella.",
-    result: "Infraestructura robusta que soporta crecimiento 10x.",
+    description: "Clean Architecture, servicios desacoplados y bases de datos optimizadas para soportar alta transaccionalidad sin cuellos de botella.",
+    result: "Infraestructura diseñada para acompañar el crecimiento del producto.",
     className: "col-span-1 md:col-span-2",
   },
   {
@@ -30,7 +30,7 @@ const capabilities = [
     label: "DEPLOY",
     title: "Despliegues sin fricción.",
     description: "Pipelines CI/CD automatizados y estrategias de release sin tiempo de inactividad, garantizando estabilidad en cada actualización.",
-    result: "Cero downtime y entregas continuas seguras.",
+    result: "Despliegues continuos con mínima interrupción y mayor control operativo.",
     className: "col-span-1 md:col-span-2",
   },
   {
@@ -38,7 +38,7 @@ const capabilities = [
     label: "SCALE",
     title: "Escalabilidad elástica.",
     description: "Estrategias Cloud-Native en AWS/GCP/Vercel que ajustan los recursos automáticamente según la demanda de tus usuarios.",
-    result: "Costos optimizados y rendimiento garantizado bajo carga.",
+    result: "Costos optimizados y Rendimiento optimizado, preparado para escenarios de alta demanda.",
     className: "col-span-1 md:col-span-2",
   }
 ];

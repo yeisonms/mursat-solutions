@@ -1,7 +1,7 @@
 import { Cpu, Users, Zap, Layers, Cloud } from "lucide-react";
 
 const credentials = [
-  { icon: Cpu, label: "Magister en Ciencias de la computación." },
+  { icon: Cpu, label: "Magíster en Ciencias de la Computación." },
   { icon: Users, label: "Ingeniero de Software, con 8 años de experiencia liderando y coordinando equipos de desarrollo a nivel empresarial." },
   { icon: Zap, label: "Aprendizaje autónomo continuo y adaptación de nuevas tecnologías." },
   { icon: Layers, label: "Aplicación estricta de Clean Architecture y principios SOLID." },

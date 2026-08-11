@@ -28,7 +28,7 @@ const caseStudies = [
       "Arquitectura web orientada a servicios.",
       "Integración operativa con plataformas de terceros (Aviatur).",
       "Despliegue Serverless con pipelines de integración continua.",
-      "Implementación rigurosa de protocolos de seguridad (SSL)."
+      "Implementación de HTTPS/TLS y controles de seguridad transaccional."
     ],
     result: "Un ecosistema digital seguro y de alta disponibilidad que unifica la operación turística y protege la información de los usuarios.",
     image: annacImg,

@@ -29,7 +29,7 @@ export function Hero() {
           
           {/* Párrafo descriptivo */}
           <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-12 animate-slide-up font-light leading-relaxed">
-            Ingeniería de software a la medida, integración de IA y arquitecturas ágiles para startups que necesitan moverse rápido sin sacrificar calidad.
+            Ingeniería de software a la medida, integración de IA y arquitecturas ágiles para startups y empresas que necesitan moverse rápido sin sacrificar calidad..
           </p>
           
           {/* Botones */}
