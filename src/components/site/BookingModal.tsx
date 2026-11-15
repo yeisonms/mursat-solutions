@@ -9,7 +9,7 @@ const CAL_USERNAME = "mursat-solutions-udwzxq/30min";
 
 interface BookingModalProps {
   triggerText?: string;
-  triggerVariant?: "primary" | "outline";
+  triggerVariant?: "primary" | "outline" | "secondary";
   className?: string;
   children?: React.ReactNode;
 }
