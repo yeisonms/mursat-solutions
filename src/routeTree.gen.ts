@@ -10,30 +10,20 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as CasosSirvoRouteImport } from './routes/casos.sirvo'
-import { Route as CasosRedfitRouteImport } from './routes/casos.redfit'
-import { Route as CasosMercacreditoRouteImport } from './routes/casos.mercacredito'
-import { Route as CasosMemoriesMagnaArteRouteImport } from './routes/casos.memories-magna-arte'
 import { Route as CasosAnnacRouteImport } from './routes/casos.annac'
+import { Route as CasosMemoriesMagnaArteRouteImport } from './routes/casos.memories-magna-arte'
+import { Route as CasosMercacreditoRouteImport } from './routes/casos.mercacredito'
+import { Route as CasosRedfitRouteImport } from './routes/casos.redfit'
+import { Route as CasosSirvoRouteImport } from './routes/casos.sirvo'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CasosSirvoRoute = CasosSirvoRouteImport.update({
-  id: '/casos/sirvo',
-  path: '/casos/sirvo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CasosRedfitRoute = CasosRedfitRouteImport.update({
-  id: '/casos/redfit',
-  path: '/casos/redfit',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CasosMercacreditoRoute = CasosMercacreditoRouteImport.update({
-  id: '/casos/mercacredito',
-  path: '/casos/mercacredito',
+const CasosAnnacRoute = CasosAnnacRouteImport.update({
+  id: '/casos/annac',
+  path: '/casos/annac',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasosMemoriesMagnaArteRoute = CasosMemoriesMagnaArteRouteImport.update({
@@ -41,9 +31,19 @@ const CasosMemoriesMagnaArteRoute = CasosMemoriesMagnaArteRouteImport.update({
   path: '/casos/memories-magna-arte',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CasosAnnacRoute = CasosAnnacRouteImport.update({
-  id: '/casos/annac',
-  path: '/casos/annac',
+const CasosMercacreditoRoute = CasosMercacreditoRouteImport.update({
+  id: '/casos/mercacredito',
+  path: '/casos/mercacredito',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasosRedfitRoute = CasosRedfitRouteImport.update({
+  id: '/casos/redfit',
+  path: '/casos/redfit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasosSirvoRoute = CasosSirvoRouteImport.update({
+  id: '/casos/sirvo',
+  path: '/casos/sirvo',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -117,25 +117,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/casos/sirvo': {
-      id: '/casos/sirvo'
-      path: '/casos/sirvo'
-      fullPath: '/casos/sirvo'
-      preLoaderRoute: typeof CasosSirvoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/casos/redfit': {
-      id: '/casos/redfit'
-      path: '/casos/redfit'
-      fullPath: '/casos/redfit'
-      preLoaderRoute: typeof CasosRedfitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/casos/mercacredito': {
-      id: '/casos/mercacredito'
-      path: '/casos/mercacredito'
-      fullPath: '/casos/mercacredito'
-      preLoaderRoute: typeof CasosMercacreditoRouteImport
+    '/casos/annac': {
+      id: '/casos/annac'
+      path: '/casos/annac'
+      fullPath: '/casos/annac'
+      preLoaderRoute: typeof CasosAnnacRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casos/memories-magna-arte': {
@@ -145,11 +131,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CasosMemoriesMagnaArteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/casos/annac': {
-      id: '/casos/annac'
-      path: '/casos/annac'
-      fullPath: '/casos/annac'
-      preLoaderRoute: typeof CasosAnnacRouteImport
+    '/casos/mercacredito': {
+      id: '/casos/mercacredito'
+      path: '/casos/mercacredito'
+      fullPath: '/casos/mercacredito'
+      preLoaderRoute: typeof CasosMercacreditoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casos/redfit': {
+      id: '/casos/redfit'
+      path: '/casos/redfit'
+      fullPath: '/casos/redfit'
+      preLoaderRoute: typeof CasosRedfitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/casos/sirvo': {
+      id: '/casos/sirvo'
+      path: '/casos/sirvo'
+      fullPath: '/casos/sirvo'
+      preLoaderRoute: typeof CasosSirvoRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
